@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 다국어 지원 객체
     const translations = {
         ko: {
-            title: 'AI 서비스 & AI 에이전트 서비스 모음',
+            title: 'AI 서비스 모음',
             description: '다양한 AI 서비스 및 AI 에이전트 서비스 링크를 제공합니다.',
             ai_services: 'AI 서비스',
             conversational_ai: '대화형 AI 서비스',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ifttt_description: '설명: 다양한 앱과 기기를 연결하여 자동화하는 플랫폼'
         },
         en: {
-            title: 'AI Services & AI Agent Services',
+            title: 'AI Services',
             description: 'Links to various AI services and AI agent services.',
             ai_services: 'AI Services',
             conversational_ai: 'Conversational AI Services',
@@ -178,4 +178,22 @@ document.addEventListener('DOMContentLoaded', function() {
             element.textContent = translations['en'][key];
         });
     }
+
+    // 탭 메뉴 기능
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.dataset.tab;
+
+            // 모든 탭 버튼 및 내용 비활성화
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // 클릭한 탭 버튼 및 내용 활성화
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
 });

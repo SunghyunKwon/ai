@@ -1,8 +1,13 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* 기본 스타일 초기화 */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    list-style: none;
+    font-family: 'Noto Sans KR', sans-serif; /* 폰트 변경 */
+}
+
+body {
+    background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
 }
@@ -14,109 +19,160 @@ body {
     overflow: hidden;
 }
 
+/* 헤더 스타일 */
 header {
-    background: #333;
-    color: white;
-    padding: 20px 0;
+    background-color: #fff;
+    padding: 30px 0;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header p {
-    margin-top: 10px;
-}
-
-main {
-    padding: 20px 0;
-}
-
-.service-list {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.service-list h2 {
-    color: #333;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
 }
 
-.service-item {
-    margin-bottom: 15px;
+header p {
+    font-size: 1.1em;
+    color: #666;
 }
 
-.service-item a {
-    color: #007bff;
-    text-decoration: none;
+/* 탭 메뉴 스타일 */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
     transition: color 0.3s ease;
 }
 
-.service-item a:hover {
-    color: #0056b3;
+.tab-button.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
+.tab-button:hover {
+    color: #007bff;
+}
+
+/* 탭 내용 스타일 */
+.tab-content {
+    display: none;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 서비스 목록 스타일 */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+
+.service-item {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd; /* 구분선 추가 */
+}
+
+.service-item:last-child {
+    border-bottom: none; /* 마지막 아이템에는 구분선 제거 */
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-item a {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+}
+
+.service-item span {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.7;
+    border-top: 1px solid #ddd; /* 구분선 추가 */
+    padding-top: 10px; /* 구분선 위 간격 추가 */
+}
+
+
+/* 푸터 스타일 */
 footer {
-    background: #333;
-    color: white;
+    background-color: #fff;
+    padding: 30px 0;
     text-align: center;
-    padding: 20px 0;
+    border-top: 1px solid #eee;
 }
 
-footer a {
-    color: white;
+footer p {
+    font-size: 0.9em;
+    color: #888;
 }
 
+/* 모바일 최적화 */
 @media (max-width: 768px) {
     .container {
         width: 95%;
     }
 
     header h1 {
-        font-size: 1.5em; /* 타이틀 크기 조정 */
-        line-height: 1.2; /* 줄 간격 조정 */
+        font-size: 2em;
     }
 
     header p {
-        font-size: 0.9em; /* 설명 폰트 크기 조정 */
+        font-size: 1em;
+    }
+
+    /* 모바일 탭 메뉴 스타일 */
+    .tab-menu {
+        display: flex;
+        overflow-x: auto; /* 가로 스크롤 추가 */
+        justify-content: flex-start; /* 왼쪽 정렬 */
+        -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 */
+        padding: 10px 0;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 1em;
+        margin: 0 5px;
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+        border-radius: 5px;
     }
 
     .service-list {
-        padding: 15px;
-    }
-
-    .service-item {
-        font-size: 0.9em;
+        grid-template-columns: 1fr;
     }
 }
-
-    /* 고급 디자인 */
-body {
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-}
-
-header {
-    background: linear-gradient(135deg, #333, #222);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.service-list {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-list:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.service-item a {
-    font-weight: 500;
-}
-    
-    
