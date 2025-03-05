@@ -1,178 +1,474 @@
-/* 기본 스타일 초기화 */
-body, h1, h2, p, ul, li {
+/* CSS Reset */
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    font-family: 'Noto Sans KR', sans-serif; /* 폰트 변경 */
+    box-sizing: border-box;
 }
 
+/* Variables */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2c3e50; /* Dark Blue */
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --light-gray: #eee;
+    --border-color: #ddd;
+    --link-color: var(--primary-color);
+    --link-hover-color: #2980b9;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* General styles */
 body {
-    background-color: #f8f8f8;
-    color: #333;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;/* CSS Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Variables */
+    :root {
+        --primary-color: #3498db; /* Blue */
+        --secondary-color: #2c3e50; /* Dark Blue */
+        --text-color: #333;
+        --background-color: #f4f4f4;
+        --light-gray: #eee;
+        --border-color: #ddd;
+        --link-color: var(--primary-color);
+        --link-hover-color: #2980b9;
+        --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    /* General styles */
+    body {
+        font-family: var(--font-family);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Header styles */
+    header {
+        background-color: var(--secondary-color);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+    
+    /* Main content styles */
+    main {
+        padding: 20px 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Tab Menu styles */
+    .tab-menu {
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 20px;
+        position: sticky;
+        top: 68px;
+        z-index: 10;
+        background-color: var(--background-color);
+        align-items: center; /* Add this to center items vertically */
+    }
+    
+    .tab-buttons {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* Add for smooth scrolling on iOS */
+    }
+    
+    .tab-button {
+        background: none;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+        color: #666;
+        flex-shrink: 0;
+    }
+    
+    .tab-button.active {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    
+    .tab-select {
+        display: none; /* Hide by default */
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 16px;
+        margin-left: auto; /* Push select to the right */
+        font-size: 18px; /* Increase font size */
+        width: 150px;
+    }
+    
+    /* Tab Content styles */
+    .tab-container {
+        flex-grow: 1;
+    }
+    
+    .tab-content {
+        display: none;
+        height: 100%;
+    }
+    
+    .tab-content.active {
+        display: block;
+    }
+    
+    /* Service List styles */
+    .service-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .service-item {
+        background-color: #fff;
+        border: 1px solid var(--border-color);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .service-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .service-item a {
+        text-decoration: none;
+        color: var(--link-color);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+    }
+    
+    .service-item a:hover {
+        color: var(--link-hover-color);
+    }
+    
+    .service-item p {
+        margin: 0;
+        color: var(--text-color);
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 10px;
+        }
+    
+        .service-list {
+            grid-template-columns: 1fr;
+        }
+    
+        .tab-buttons {
+            display: none; /* Hide tab buttons on mobile */
+        }
+    
+        .tab-select {
+            margin-top: 10px;
+            width: 100%;
+            display: block; /* Show tab select on mobile */
+        }
+        
+        header h1 {
+          font-size: 2em;
+        }
+    }
+    
+    /* Loading Overlay */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Ensure it's on top */
+    }
+    
+    .loading-spinner {
+      border: 8px solid rgba(0, 0, 0, 0.1);
+      border-left-color: var(--primary-color);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Sort and Filter */
+    .sort-filter-container {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    #sortSelect {
+      padding: 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    #filterInput {
+      padding: 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 14px;
+      flex-grow: 1;
+    }
+    
 }
 
-/* 헤더 스타일 */
+/* Header styles */
 header {
-    background-color: #fff;
-    padding: 30px 0;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #222;
     margin-bottom: 10px;
+    font-size: 2.5em;
 }
 
-header p {
-    font-size: 1.1em;
-    color: #666;
+/* Main content styles */
+main {
+    padding: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/* 탭 메뉴 스타일 */
+/* Tab Menu styles */
 .tab-menu {
     display: flex;
-    justify-content: center;
-    margin: 30px 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    position: sticky;
+    top: 68px;
+    z-index: 10;
+    background-color: var(--background-color);
+    align-items: center; /* Add this to center items vertically */
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Add for smooth scrolling on iOS */
 }
 
 .tab-button {
-    background-color: transparent;
+    background: none;
     border: none;
-    padding: 15px 30px;
-    margin: 0 10px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #555;
-    transition: color 0.3s ease;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    color: #666;
+    flex-shrink: 0;
 }
 
 .tab-button.active {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
-.tab-button:hover {
-    color: #007bff;
+.tab-select {
+    display: none; /* Hide by default */
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: auto; /* Push select to the right */
 }
 
-/* 탭 내용 스타일 */
+/* Tab Content styles */
+.tab-container {
+    flex-grow: 1;
+}
+
 .tab-content {
     display: none;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    margin-bottom: 40px;
+    height: 100%;
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* 서비스 목록 스타일 */
+/* Service List styles */
 .service-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
-
 
 .service-item {
-    background-color: #f0f0f0;
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #ddd; /* 구분선 추가 */
-}
-
-.service-item:last-child {
-    border-bottom: none; /* 마지막 아이템에는 구분선 제거 */
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
 }
 
 .service-item a {
-    display: block;
-    font-size: 1.2em;
-    font-weight: 600;
-    color: #222;
     text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
-.service-item span {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.7;
-    border-top: 1px solid #ddd; /* 구분선 추가 */
-    padding-top: 10px; /* 구분선 위 간격 추가 */
+.service-item a:hover {
+    color: var(--link-hover-color);
 }
 
-
-/* 푸터 스타일 */
-footer {
-    background-color: #fff;
-    padding: 30px 0;
-    text-align: center;
-    border-top: 1px solid #eee;
+.service-item p {
+    margin: 0;
+    color: var(--text-color);
 }
 
-footer p {
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* 모바일 최적화 */
+/* Responsive design */
 @media (max-width: 768px) {
     .container {
-        width: 95%;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    /* 모바일 탭 메뉴 스타일 */
-    .tab-menu {
-        display: flex;
-        overflow-x: auto; /* 가로 스크롤 추가 */
-        justify-content: flex-start; /* 왼쪽 정렬 */
-        -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 */
-        padding: 10px 0;
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        margin-bottom: 20px;
-    }
-
-    .tab-button {
-        padding: 10px 15px;
-        font-size: 1em;
-        margin: 0 5px;
-        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
-        border-radius: 5px;
+        padding: 0 10px;
     }
 
     .service-list {
         grid-template-columns: 1fr;
     }
+
+    .tab-buttons {
+        display: none; /* Hide tab buttons on mobile */
+    }
+
+    .tab-select {
+        width: 100%;
+        display: block; /* Show tab select on mobile */
+    }
+    
+    header h1 {
+      font-size: 2em;
+    }
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.loading-spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sort and Filter */
+.sort-filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#sortSelect {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#filterInput {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  flex-grow: 1;
 }
