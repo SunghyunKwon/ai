@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.service-list {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-list h2 {
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.service-item {
+    margin-bottom: 15px;
+}
+
+.service-item a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-item a:hover {
+    color: #0056b3;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.5em; /* 타이틀 크기 조정 */
+        line-height: 1.2; /* 줄 간격 조정 */
+    }
+
+    header p {
+        font-size: 0.9em; /* 설명 폰트 크기 조정 */
+    }
+
+    .service-list {
+        padding: 15px;
+    }
+
+    .service-item {
+        font-size: 0.9em;
+    }
+}
+
+    /* 고급 디자인 */
+body {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+}
+
+header {
+    background: linear-gradient(135deg, #333, #222);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.service-list {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-item a {
+    font-weight: 500;
+}
+    
+    
