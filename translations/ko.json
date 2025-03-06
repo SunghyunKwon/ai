@@ -32,5 +32,13 @@
   "sort_default": "기본 정렬",
   "sort_asc": "이름 오름차순",
   "sort_desc": "이름 내림차순",
-  "filter_placeholder": "필터링 (이름)"
+  "filter_placeholder": "필터링 (이름)",
+  "gemini_code_assist_description": "설명: 구글의 AI 기반 코딩 지원 서비스",
+  "github_copilot_description": "설명: GitHub의 AI 기반 코딩 지원 서비스",
+  "tabnine_description": "설명: AI 기반 자동 코드 완성 서비스",
+  "codeium_description": "설명: AI 기반 코드 완성 및 코드 생성 서비스",
+  "aws_codewhisperer_description": "설명: AI 기반 코딩 서비스",
+  "mistral_description": "설명: Mistral AI에서 개발한 강력한 성능의 오픈 소스 대화형 AI 모델",
+  "llama2_description": "설명: Meta에서 개발한 오픈 소스 대화형 AI 모델",
+  "karakhan_description": "설명: 한국어에 특화된 생성형 AI 연구 커뮤니티 프로젝트"
 }

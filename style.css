@@ -108,6 +108,7 @@ main {
 
 /* Tab Select (Mobile) */
 .tab-select {
+  display: none;
   width: 100%; /* Make it full width on mobile */
   padding: 10px;
   border: 1px solid var(--border-color);
@@ -133,12 +134,12 @@ main {
 
 /* Tab Content */
 .tab-container {
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  min-height: 300px; 
 }
 
 .tab-content {
   display: none;
-  height: 100%;
 }
 
 .tab-content.active {
@@ -150,7 +151,7 @@ main {
 --------------------------------------------------------------------*/
 .service-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 444.625px));
   gap: 20px;
 }
 

@@ -32,5 +32,13 @@
   "sort_default": "Default Sort",
   "sort_asc": "Name Ascending",
   "sort_desc": "Name Descending",
-  "filter_placeholder": "Filter (Name)"
+  "filter_placeholder": "Filter (Name)",
+  "gemini_code_assist_description": "Description: Google's AI-powered coding assistance service",
+  "github_copilot_description": "Description: GitHub's AI-powered coding assistance service",
+  "tabnine_description": "Description: AI-powered automatic code completion service",
+  "codeium_description": "Description: AI-powered code completion and generation service",
+  "aws_codewhisperer_description": "Description: AI-powered coding service",
+  "mistral_description": "Description: Powerful open-source conversational AI model developed by Mistral AI",
+  "llama2_description": "Description: Open-source conversational AI model developed by Meta",
+  "karakhan_description": "Description: Generative AI research community project with a focus on Korean language."
 }

@@ -1,15 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Loading
     const loadingOverlay = document.getElementById('loadingOverlay');
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         loadingOverlay.style.display = 'none';
     });
+
+    const tabButtons = document.querySelectorAll('.tab-button');
 
     // Mobile select menu
     const tabSelect = document.querySelector('.tab-select');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    tabSelect.addEventListener('change', function() {
+    tabSelect.addEventListener('change', function () {
         const selectedTab = this.value;
 
         tabContents.forEach(tabContent => {
@@ -22,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initial tab loading
-    const defaultTab = tabSelect.value;
+    const activeTabButton = document.querySelector('.tab-button.active');
+    const defaultTab = activeTabButton ? activeTabButton.dataset.tab : tabSelect.value;
+
     tabContents.forEach(tabContent => {
         if (tabContent.id === defaultTab) {
             tabContent.classList.add('active');
@@ -31,8 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // add active class to button or select
+    if (activeTabButton) {
+        tabButtons.forEach(btn => {
+            if (btn.dataset.tab === defaultTab) {
+                btn.classList.add('active');
+            }
+        })
+    } else {
+        tabSelect.value = defaultTab;
+    }
+
     // Desktop button menu
-    const tabButtons = document.querySelectorAll('.tab-button');
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
