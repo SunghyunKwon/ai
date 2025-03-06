@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function loadTranslations() {
         const lang = 'ko'; // navigator.language.substring(0, 2); // Get the first two characters of the language code
-        fetch(`${lang}.json`)
+        fetch(`translations/${lang}.json`)
             .then(response => response.json())
             .then(translations => {
                 translatePage(translations);
