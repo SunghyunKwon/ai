@@ -1,6 +1,7 @@
 {
   "title": "AI 서비스 모음",
   "description": "다양한 AI 서비스 및 AI 에이전트 서비스 링크를 제공합니다.",
+  "tab_select_placeholder": "탭 선택",
   "conversational_ai": "대화형 AI",
   "ai_services": "AI 서비스",
   "ai_agents": "AI 에이전트",
@@ -12,6 +13,7 @@
   "perplexity_description": "설명: AI 기반 대화형 검색 엔진",
   "claude_description": "설명: Anthropic에서 개발한 대화형 AI 서비스",
   "deepseek_description": "설명: DeepSeek에서 개발한 강력한 성능의 대화형 AI 서비스",
+  "grok_description": "설명: xAI에서 개발한 유머 감각이 있는 대화형 AI 서비스",
   "lunit_description": "설명: 흉부 엑스레이 영상 분석 AI 서비스",
   "vrew_description": "설명: 영상 편집 자동화 AI 서비스",
   "mindsweeper_description": "설명: AI 기반 악성코드 탐지 서비스",
@@ -30,6 +32,5 @@
   "sort_default": "기본 정렬",
   "sort_asc": "이름 오름차순",
   "sort_desc": "이름 내림차순",
-  "filter_placeholder": "필터링 (이름)",
-  "tab_select" : "탭 선택"
+  "filter_placeholder": "필터링 (이름)"
 }

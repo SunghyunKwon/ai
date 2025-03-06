@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
@@ -20,17 +22,21 @@
     <main class="container">
         <div class="tab-menu">
             <div class="tab-buttons">
-              <button class="tab-button active" data-tab="conversational_ai" data-i18n="conversational_ai">대화형 AI</button>
-              <button class="tab-button" data-tab="ai_services" data-i18n="ai_services">AI 서비스</button>
-              <button class="tab-button" data-tab="ai_agents" data-i18n="ai_agents">AI 에이전트</button>
-              <button class="tab-button" data-tab="automation_platforms" data-i18n="automation_platforms">자동화 플랫폼</button>
+                <button class="tab-button active" data-tab="conversational_ai" data-i18n="conversational_ai">대화형
+                    AI</button>
+                <button class="tab-button" data-tab="ai_services" data-i18n="ai_services">AI 서비스</button>
+                <button class="tab-button" data-tab="ai_agents" data-i18n="ai_agents">AI 에이전트</button>
+                <button class="tab-button" data-tab="automation_platforms" data-i18n="automation_platforms">자동화
+                    플랫폼</button>
             </div>
             <select class="tab-select" data-i18n="tab_select">
+                <option value="" disabled selected hidden data-i18n="tab_select_placeholder">탭 선택</option>
                 <option value="conversational_ai" data-i18n="conversational_ai">대화형 AI</option>
                 <option value="ai_services" data-i18n="ai_services">AI 서비스</option>
                 <option value="ai_agents" data-i18n="ai_agents">AI 에이전트</option>
                 <option value="automation_platforms" data-i18n="automation_platforms">자동화 플랫폼</option>
             </select>
+
         </div>
         <div class="sort-filter-container">
             <select id="sortSelect">
@@ -41,111 +47,116 @@
             <input type="text" id="filterInput" placeholder="필터링 (이름)" data-i18n="filter_placeholder">
         </div>
         <div class="tab-container">
-          <section class="tab-content active" id="conversational_ai">
-              <div class="service-list">
-                  <div class="service-item">
-                      <a href="https://gemini.google.com/">Google Gemini</a>
-                      <p data-i18n="gemini_description">설명: 구글의 최신 대화형 AI 모델</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://chat.openai.com/">ChatGPT</a>
-                      <p data-i18n="chatgpt_description">설명: 오픈AI의 대화형 AI 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://clova-x.naver.com/">네이버 클로바X</a>
-                      <p data-i18n="clova_description">설명: 네이버의 대화형 AI 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://wrtn.ai/">뤼튼</a>
-                      <p data-i18n="wrtn_description">설명: AI 글쓰기 및 대화 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://www.perplexity.ai/">Perplexity AI</a>
-                      <p data-i18n="perplexity_description">설명: AI 기반 대화형 검색 엔진</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://claude.ai/">Claude</a>
-                      <p data-i18n="claude_description">설명: Anthropic에서 개발한 대화형 AI 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://chat.deepseek.com/">DeepSeek Chat</a>
-                      <p data-i18n="deepseek_description">설명: DeepSeek에서 개발한 강력한 성능의 대화형 AI 서비스</p>
-                  </div>
-              </div>
-          </section>
-          <section class="tab-content" id="ai_services">
-              <div class="service-list">
-                  <div class="service-item">
-                      <a href="https://lunit.io/products/lunit-insight-cxr">루닛 인사이트 CXR</a>
-                      <p data-i18n="lunit_description">설명: 흉부 엑스레이 영상 분석 AI 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://vrew.voyagerx.com/">브루</a>
-                      <p data-i18n="vrew_description">설명: 영상 편집 자동화 AI 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://lablup.com/ko/mindsweeper/">마인드스위퍼</a>
-                      <p data-i18n="mindsweeper_description">설명: AI 기반 악성코드 탐지 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://touniverse.com/service/image-generation">Uni AI 이미지 생성</a>
-                      <p data-i18n="uni_description">설명: AI 이미지 생성 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://kr.kakaobrain.com/minidol">미니돌</a>
-                      <p data-i18n="minidol_description">설명: AI 기반 이미지 편집 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://www.supertone.ai/">수퍼톤</a>
-                      <p data-i18n="supertone_description">설명: AI 기반 음성 편집 서비스</p>
-                  </div>
-              </div>
-          </section>
-          <section class="tab-content" id="ai_agents">
-              <div class="service-list">
-                  <div class="service-item">
-                      <a href="https://openai.com/blog/function-calling-and-other-api-updates">오픈AI 에이전트</a>
-                      <p data-i18n="openai_agent_description">설명: 오픈AI의 AI 에이전트 서비스</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://github.com/Significant-Gravitas/Auto-GPT">Auto-GPT</a>
-                      <p data-i18n="auto_gpt_description">설명: 자율적으로 목표를 수행하는 AI 에이전트</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://github.com/yoheinakajima/babyagi">BabyAGI</a>
-                      <p data-i18n="babyagi_description">설명: 작업 기반 AI 에이전트</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://github.com/e2b-dev/e2b">E2B</a>
-                      <p data-i18n="e2b_description">설명: 코딩 AI 에이전트</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://github.com/microsoft/JARVIS">JARVIS</a>
-                      <p data-i18n="jarvis_description">설명: 멀티모달 AI 에이전트</p>
-                  </div>
-              </div>
-          </section>
-          <section class="tab-content" id="automation_platforms">
-              <div class="service-list">
-                  <div class="service-item">
-                      <a href="https://www.make.com/">Make (이전의 Integromat)</a>
-                      <p data-i18n="make_description">설명: 다양한 앱과 서비스를 연결하여 워크플로우를 자동화하는 플랫폼</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://zapier.com/">Zapier</a>
-                      <p data-i18n="zapier_description">설명: 웹 애플리케이션 연결 및 자동화 플랫폼</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://n8n.io/">n8n</a>
-                      <p data-i18n="n8n_description">설명: 오픈 소스 워크플로우 자동화 도구</p>
-                  </div>
-                  <div class="service-item">
-                      <a href="https://ifttt.com/">IFTTT</a>
-                      <p data-i18n="ifttt_description">설명: 다양한 앱과 기기를 연결하여 자동화하는 플랫폼</p>
-                  </div>
-              </div>
-          </section>
+            <section class="tab-content active" id="conversational_ai">
+                <div class="service-list">
+                    <div class="service-item">
+                        <a href="https://gemini.google.com/">Google Gemini</a>
+                        <p data-i18n="gemini_description">설명: 구글의 최신 대화형 AI 모델</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://chat.openai.com/">ChatGPT</a>
+                        <p data-i18n="chatgpt_description">설명: 오픈AI의 대화형 AI 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://x.ai/">Grok</a>
+                        <p data-i18n="grok_description">설명: xAI에서 개발한 유머 감각이 있는 대화형 AI 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://clova-x.naver.com/">네이버 클로바X</a>
+                        <p data-i18n="clova_description">설명: 네이버의 대화형 AI 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://wrtn.ai/">뤼튼</a>
+                        <p data-i18n="wrtn_description">설명: AI 글쓰기 및 대화 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://www.perplexity.ai/">Perplexity AI</a>
+                        <p data-i18n="perplexity_description">설명: AI 기반 대화형 검색 엔진</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://claude.ai/">Claude</a>
+                        <p data-i18n="claude_description">설명: Anthropic에서 개발한 대화형 AI 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://chat.deepseek.com/">DeepSeek Chat</a>
+                        <p data-i18n="deepseek_description">설명: DeepSeek에서 개발한 강력한 성능의 대화형 AI 서비스</p>
+                    </div>
+                </div>
+            </section>
+            <section class="tab-content" id="ai_services">
+                <div class="service-list">
+                    <div class="service-item">
+                        <a href="https://lunit.io/products/lunit-insight-cxr">루닛 인사이트 CXR</a>
+                        <p data-i18n="lunit_description">설명: 흉부 엑스레이 영상 분석 AI 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://vrew.voyagerx.com/">브루</a>
+                        <p data-i18n="vrew_description">설명: 영상 편집 자동화 AI 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://lablup.com/ko/mindsweeper/">마인드스위퍼</a>
+                        <p data-i18n="mindsweeper_description">설명: AI 기반 악성코드 탐지 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://touniverse.com/service/image-generation">Uni AI 이미지 생성</a>
+                        <p data-i18n="uni_description">설명: AI 이미지 생성 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://kr.kakaobrain.com/minidol">미니돌</a>
+                        <p data-i18n="minidol_description">설명: AI 기반 이미지 편집 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://www.supertone.ai/">수퍼톤</a>
+                        <p data-i18n="supertone_description">설명: AI 기반 음성 편집 서비스</p>
+                    </div>
+                </div>
+            </section>
+            <section class="tab-content" id="ai_agents">
+                <div class="service-list">
+                    <div class="service-item">
+                        <a href="https://openai.com/blog/function-calling-and-other-api-updates">오픈AI 에이전트</a>
+                        <p data-i18n="openai_agent_description">설명: 오픈AI의 AI 에이전트 서비스</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://github.com/Significant-Gravitas/Auto-GPT">Auto-GPT</a>
+                        <p data-i18n="auto_gpt_description">설명: 자율적으로 목표를 수행하는 AI 에이전트</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://github.com/yoheinakajima/babyagi">BabyAGI</a>
+                        <p data-i18n="babyagi_description">설명: 작업 기반 AI 에이전트</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://github.com/e2b-dev/e2b">E2B</a>
+                        <p data-i18n="e2b_description">설명: 코딩 AI 에이전트</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://github.com/microsoft/JARVIS">JARVIS</a>
+                        <p data-i18n="jarvis_description">설명: 멀티모달 AI 에이전트</p>
+                    </div>
+                </div>
+            </section>
+            <section class="tab-content" id="automation_platforms">
+                <div class="service-list">
+                    <div class="service-item">
+                        <a href="https://www.make.com/">Make (이전의 Integromat)</a>
+                        <p data-i18n="make_description">설명: 다양한 앱과 서비스를 연결하여 워크플로우를 자동화하는 플랫폼</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://zapier.com/">Zapier</a>
+                        <p data-i18n="zapier_description">설명: 웹 애플리케이션 연결 및 자동화 플랫폼</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://n8n.io/">n8n</a>
+                        <p data-i18n="n8n_description">설명: 오픈 소스 워크플로우 자동화 도구</p>
+                    </div>
+                    <div class="service-item">
+                        <a href="https://ifttt.com/">IFTTT</a>
+                        <p data-i18n="ifttt_description">설명: 다양한 앱과 기기를 연결하여 자동화하는 플랫폼</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 </body>
+
 </html>
