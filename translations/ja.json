@@ -31,5 +31,16 @@
   "sort_asc": "名前昇順",
   "sort_desc": "名前降順",
   "filter_placeholder": "フィルタリング（名前）",
-  "tab_select": "タブを選択"
+  "tab_select": "タブを選択",
+  "claude3_description": "説明: Anthropicが開発した最新の対話型AIサービス",
+  "mistral_large_description": "説明: Mistral AIの最新の大規模言語モデル",
+  "amazon_q_description": "説明: AWSのAIベースのコーディングアシスタント",
+  "replit_ai_description": "説明: ReplitのAIベースのコーディングサポートサービス",
+  "runway_description": "説明: AIベースの動画生成・編集サービス",
+  "descript_description": "説明: AIベースの音声/動画編集サービス",
+  "agentverse_description": "説明: マルチエージェントシミュレーション用フレームワーク",
+  "openagents_description": "説明: Webブラウジング、データ分析、PythonコーディングをサポートするオープンソースAIエージェント",
+  "cpm_bee_description": "説明: 中国語と英語をサポートするオープンソース大規模言語モデル",
+  "automation_anywhere_description": "説明: AIベースのRPA自動化プラットフォーム",
+  "uipath_description": "説明: AIベースのRPA自動化プラットフォーム"
 }

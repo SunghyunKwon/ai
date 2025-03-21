@@ -78,5 +78,16 @@
   "phidata_strength": "메모리 및 도구 통합",
   "phidata_weakness": "다중 에이전트 협업 약함",
   "superagi_strength": "자율성, 학습 능력",
-  "superagi_weakness": "팀워크보단 개별 초점"
+  "superagi_weakness": "팀워크보단 개별 초점",
+  "claude3_description": "설명: Anthropic에서 개발한 최신 대화형 AI 서비스",
+  "mistral_large_description": "설명: Mistral AI의 최신 대규모 언어 모델",
+  "amazon_q_description": "설명: AWS의 AI 기반 코딩 어시스턴트",
+  "replit_ai_description": "설명: Replit의 AI 기반 코딩 지원 서비스",
+  "runway_description": "설명: AI 기반 영상 생성 및 편집 서비스",
+  "descript_description": "설명: AI 기반 오디오/비디오 편집 서비스",
+  "agentverse_description": "설명: 다중 에이전트 시뮬레이션을 위한 프레임워크",
+  "openagents_description": "설명: 웹 브라우징, 데이터 분석, 파이썬 코딩을 지원하는 오픈소스 AI 에이전트",
+  "cpm_bee_description": "설명: 중국어와 영어를 지원하는 오픈소스 대규모 언어 모델",
+  "automation_anywhere_description": "설명: AI 기반 RPA 자동화 플랫폼",
+  "uipath_description": "설명: AI 기반 RPA 자동화 플랫폼"
 }

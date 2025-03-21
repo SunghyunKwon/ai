@@ -78,5 +78,16 @@
   "phidata_strength": "Memory and tool integration",
   "phidata_weakness": "Weak multi-agent collaboration",
   "superagi_strength": "Autonomy, learning ability",
-  "superagi_weakness": "Focus on individual rather than teamwork"
+  "superagi_weakness": "Focus on individual rather than teamwork",
+  "claude3_description": "Description: Latest conversational AI service developed by Anthropic",
+  "mistral_large_description": "Description: Latest large language model from Mistral AI",
+  "amazon_q_description": "Description: AWS's AI-based coding assistant",
+  "replit_ai_description": "Description: Replit's AI-based coding support service",
+  "runway_description": "Description: AI-based video generation and editing service",
+  "descript_description": "Description: AI-based audio/video editing service",
+  "agentverse_description": "Description: Framework for multi-agent simulation",
+  "openagents_description": "Description: Open-source AI agent supporting web browsing, data analysis, and Python coding",
+  "cpm_bee_description": "Description: Open-source large language model supporting Chinese and English",
+  "automation_anywhere_description": "Description: AI-based RPA automation platform",
+  "uipath_description": "Description: AI-based RPA automation platform"
 }

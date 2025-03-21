@@ -31,5 +31,16 @@
   "sort_asc": "名称升序",
   "sort_desc": "名称降序",
   "filter_placeholder": "筛选（名称）",
-    "tab_select": "选择选项卡"
+  "tab_select": "选择选项卡",
+  "claude3_description": "描述：Anthropic开发的最新对话式AI服务",
+  "mistral_large_description": "描述：Mistral AI的最新大语言模型",
+  "amazon_q_description": "描述：AWS的AI编程助手",
+  "replit_ai_description": "描述：Replit的AI编程支持服务",
+  "runway_description": "描述：AI视频生成和编辑服务",
+  "descript_description": "描述：AI音频/视频编辑服务",
+  "agentverse_description": "描述：多智能体模拟框架",
+  "openagents_description": "描述：支持网页浏览、数据分析和Python编程的开源AI代理",
+  "cpm_bee_description": "描述：支持中文和英文的开源大语言模型",
+  "automation_anywhere_description": "描述：基于AI的RPA自动化平台",
+  "uipath_description": "描述：基于AI的RPA自动化平台"
 }

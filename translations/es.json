@@ -31,5 +31,16 @@
   "sort_asc": "Nombre Ascendente",
   "sort_desc": "Nombre Descendente",
   "filter_placeholder": "Filtrar (Nombre)",
-  "tab_select": "Seleccionar pestaña"
+  "tab_select": "Seleccionar pestaña",
+  "claude3_description": "Descripción: Último servicio de IA conversacional desarrollado por Anthropic",
+  "mistral_large_description": "Descripción: Último modelo de lenguaje grande de Mistral AI",
+  "amazon_q_description": "Descripción: Asistente de programación basado en IA de AWS",
+  "replit_ai_description": "Descripción: Servicio de soporte de programación basado en IA de Replit",
+  "runway_description": "Descripción: Servicio de generación y edición de video basado en IA",
+  "descript_description": "Descripción: Servicio de edición de audio/video basado en IA",
+  "agentverse_description": "Descripción: Marco para simulación de múltiples agentes",
+  "openagents_description": "Descripción: Agente de IA de código abierto que soporta navegación web, análisis de datos y programación en Python",
+  "cpm_bee_description": "Descripción: Modelo de lenguaje grande de código abierto que soporta chino e inglés",
+  "automation_anywhere_description": "Descripción: Plataforma de automatización RPA basada en IA",
+  "uipath_description": "Descripción: Plataforma de automatización RPA basada en IA"
 }
