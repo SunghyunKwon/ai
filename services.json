@@ -1,0 +1,278 @@
+{
+    "conversational_ai": {
+        "general_conversational_ai": [
+            {
+                "name": "Google Gemini",
+                "url": "https://gemini.google.com/",
+                "description_key": "gemini_description"
+            },
+            {
+                "name": "ChatGPT",
+                "url": "https://chat.openai.com/",
+                "description_key": "chatgpt_description"
+            },
+            {
+                "name": "Grok",
+                "url": "https://x.ai/",
+                "description_key": "grok_description"
+            },
+            {
+                "name": "네이버 클로바X",
+                "url": "https://clova-x.naver.com/",
+                "description_key": "clova_description"
+            },
+            {
+                "name": "Claude",
+                "url": "https://claude.ai/",
+                "description_key": "claude_description"
+            },
+            {
+                "name": "DeepSeek Chat",
+                "url": "https://chat.deepseek.com/",
+                "description_key": "deepseek_description"
+            },
+            {
+                "name": "Claude 3",
+                "url": "https://chat.anthropic.com/",
+                "description_key": "claude3_description"
+            },
+            {
+                "name": "Mistral Large",
+                "url": "https://chat.mistral.ai/",
+                "description_key": "mistral_large_description"
+            }
+        ],
+        "ai_search_engine": [
+            {
+                "name": "Perplexity AI",
+                "url": "https://www.perplexity.ai/",
+                "description_key": "perplexity_description"
+            }
+        ],
+        "ai_write_and_conversation": [
+            {
+                "name": "뤼튼",
+                "url": "https://wrtn.ai/",
+                "description_key": "wrtn_description"
+            }
+        ],
+        "opensource_ai_model": [
+            {
+                "name": "Mistral AI",
+                "url": "https://mistral.ai/",
+                "description_key": "mistral_description"
+            },
+            {
+                "name": "Llama 2",
+                "url": "https://llama.meta.com/",
+                "description_key": "llama2_description"
+            },
+            {
+                "name": "KarakhanAI",
+                "url": "https://karakhan.ai/",
+                "description_key": "karakhan_description"
+            }
+        ]
+    },
+    "ai_services": {
+        "code_assistant": [
+            {
+                "name": "Gemini Code Assist",
+                "url": "https://codeassist.google/products/business",
+                "description_key": "gemini_code_assist_description"
+            },
+            {
+                "name": "GitHub Copilot",
+                "url": "https://github.com/features/copilot",
+                "description_key": "github_copilot_description"
+            },
+            {
+                "name": "Tabnine",
+                "url": "https://www.tabnine.com/",
+                "description_key": "tabnine_description"
+            },
+            {
+                "name": "AWS CodeWhisperer",
+                "url": "https://aws.amazon.com/ko/codewhisperer/",
+                "description_key": "aws_codewhisperer_description"
+            },
+            {
+                "name": "Codeium",
+                "url": "https://www.codeium.com/",
+                "description_key": "codeium_description"
+            },
+            {
+                "name": "Amazon Q",
+                "url": "https://www.amazonq.com/",
+                "description_key": "amazon_q_description"
+            },
+            {
+                "name": "Replit AI",
+                "url": "https://www.replit.com/ai",
+                "description_key": "replit_ai_description"
+            }
+        ],
+        "medical_imaging": [
+            {
+                "name": "루닛 인사이트 CXR",
+                "url": "https://lunit.io/products/lunit-insight-cxr",
+                "description_key": "lunit_description"
+            }
+        ],
+        "multimedia_edit": [
+            {
+                "name": "수퍼톤",
+                "url": "https://www.supertone.ai/",
+                "description_key": "supertone_description"
+            },
+            {
+                "name": "브루",
+                "url": "https://vrew.voyagerx.com/",
+                "description_key": "vrew_description"
+            },
+            {
+                "name": "Uni AI 이미지 생성",
+                "url": "https://touniverse.com/service/image-generation",
+                "description_key": "uni_description"
+            },
+            {
+                "name": "미니돌",
+                "url": "https://kr.kakaobrain.com/minidol",
+                "description_key": "minidol_description"
+            },
+            {
+                "name": "Runway",
+                "url": "https://www.runwayml.com/",
+                "description_key": "runway_description"
+            },
+            {
+                "name": "Descript",
+                "url": "https://www.descript.com/",
+                "description_key": "descript_description"
+            }
+        ],
+        "security_detection": [
+            {
+                "name": "마인드스위퍼",
+                "url": "https://lablup.com/ko/mindsweeper/",
+                "description_key": "mindsweeper_description"
+            }
+        ]
+    },
+    "ai_agents": {
+        "general_ai_agents": [
+            {
+                "name": "오픈AI 에이전트",
+                "url": "https://openai.com/blog/function-calling-and-other-api-updates",
+                "description_key": "openai_agent_description"
+            }
+        ],
+        "autonomous_ai_agents": [
+            {
+                "name": "Auto-GPT",
+                "url": "https://github.com/Significant-Gravitas/Auto-GPT",
+                "description_key": "auto_gpt_description"
+            },
+            {
+                "name": "BabyAGI",
+                "url": "https://github.com/yoheinakajima/babyagi",
+                "description_key": "babyagi_description"
+            }
+        ],
+        "coding_ai_agents": [
+            {
+                "name": "E2B",
+                "url": "https://github.com/e2b-dev/e2b",
+                "description_key": "e2b_description"
+            }
+        ],
+        "multimodal_ai_agents": [
+            {
+                "name": "JARVIS",
+                "url": "https://github.com/microsoft/JARVIS",
+                "description_key": "jarvis_description"
+            }
+        ],
+        "framework_ai_agents": [
+            {
+                "name": "CrewAI",
+                "url": "https://github.com/crewAIInc/crewAI",
+                "description_key": "crewai_description"
+            },
+            {
+                "name": "AutoGen",
+                "url": "https://github.com/microsoft/autogen",
+                "description_key": "autogen_description"
+            },
+            {
+                "name": "LangGraph",
+                "url": "https://github.com/langchain-ai/langgraph",
+                "description_key": "lang_graph_description"
+            },
+            {
+                "name": "OpenAI Swarm",
+                "url": "https://github.com/openai/swarm",
+                "description_key": "openai_swam_description"
+            },
+            {
+                "name": "Phidata",
+                "url": "https://github.com/agno-agi/agno",
+                "description_key": "phidata_description"
+            },
+            {
+                "name": "SuperAGI",
+                "url": "https://github.com/TransformerOptimus/SuperAGI",
+                "description_key": "superagi_description"
+            },
+            {
+                "name": "AgentVerse",
+                "url": "https://github.com/OpenBMB/AgentVerse",
+                "description_key": "agentverse_description"
+            },
+            {
+                "name": "OpenAgents",
+                "url": "https://github.com/OpenBMB/OpenAgents",
+                "description_key": "openagents_description"
+            },
+            {
+                "name": "CPM-Bee",
+                "url": "https://github.com/OpenBMB/CPM-Bee",
+                "description_key": "cpm_bee_description"
+            }
+        ]
+    },
+    "automation_platforms": {
+        "automation_platforms_list": [
+            {
+                "name": "Make (이전의 Integromat)",
+                "url": "https://www.make.com/",
+                "description_key": "make_description"
+            },
+            {
+                "name": "Zapier",
+                "url": "https://zapier.com/",
+                "description_key": "zapier_description"
+            },
+            {
+                "name": "n8n",
+                "url": "https://n8n.io/",
+                "description_key": "n8n_description"
+            },
+            {
+                "name": "IFTTT",
+                "url": "https://ifttt.com/",
+                "description_key": "ifttt_description"
+            },
+            {
+                "name": "Automation Anywhere",
+                "url": "https://www.automationanywhere.com/",
+                "description_key": "automation_anywhere_description"
+            },
+            {
+                "name": "UiPath",
+                "url": "https://www.uipath.com/",
+                "description_key": "uipath_description"
+            }
+        ]
+    }
+}

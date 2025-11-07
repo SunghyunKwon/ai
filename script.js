@@ -63,8 +63,56 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // i18n 
+    // i18n
     loadTranslations();
+    loadServices();
+
+    function loadServices() {
+        fetch('services.json')
+            .then(response => response.json())
+            .then(services => {
+                const serviceLists = {
+                    'conversational_ai': document.querySelector('#conversational_ai .service-list'),
+                    'ai_services': document.querySelector('#ai_services .service-list'),
+                    'ai_agents': document.querySelector('#ai_agents .service-list'),
+                    'automation_platforms': document.querySelector('#automation_platforms .service-list')
+                };
+
+                for (const category in services) {
+                    const serviceListContainer = serviceLists[category];
+                    if (serviceListContainer) {
+                        for (const subCategory in services[category]) {
+                            const subCategoryTitle = document.createElement('h3');
+                            subCategoryTitle.classList.add('service-list-title');
+                            subCategoryTitle.dataset.i18n = subCategory;
+                            serviceListContainer.appendChild(subCategoryTitle);
+
+                            services[category][subCategory].forEach(service => {
+                                const serviceItem = document.createElement('div');
+                                serviceItem.classList.add('service-item');
+
+                                const link = document.createElement('a');
+                                link.href = service.url;
+                                link.target = '_blank';
+                                link.textContent = service.name;
+
+                                const description = document.createElement('p');
+                                description.dataset.i18n = service.description_key;
+
+                                serviceItem.appendChild(link);
+                                serviceItem.appendChild(description);
+                                serviceListContainer.appendChild(serviceItem);
+                            });
+                        }
+                    }
+                }
+
+                loadTranslations();
+            })
+            .catch(error => {
+                console.error('Error loading services:', error);
+            });
+    }
 
     function loadTranslations() {
         const lang = 'ko'; // navigator.language.substring(0, 2); // Get the first two characters of the language code
@@ -106,8 +154,38 @@ document.addEventListener('DOMContentLoaded', function () {
                     return 0;
                 }
             });
+
+            // Re-append sorted services, preserving sub-category titles
+            const titles = Array.from(serviceList.querySelectorAll('.service-list-title'));
+            const servicesByTitle = {};
+
+            titles.forEach(title => {
+                servicesByTitle[title.dataset.i18n] = [];
+            });
+
+            services.forEach(service => {
+                let currentTitle = '';
+                let previousElement = service.previousElementSibling;
+                while(previousElement) {
+                    if(previousElement.classList.contains('service-list-title')) {
+                        currentTitle = previousElement.dataset.i18n;
+                        break;
+                    }
+                    previousElement = previousElement.previousElementSibling;
+                }
+                if (currentTitle) {
+                    servicesByTitle[currentTitle].push(service);
+                }
+            });
+
+
             serviceList.innerHTML = '';
-            services.forEach(service => serviceList.appendChild(service));
+            titles.forEach(title => {
+                serviceList.appendChild(title);
+                servicesByTitle[title.dataset.i18n].forEach(service => {
+                    serviceList.appendChild(service);
+                });
+            });
         });
     }
 
