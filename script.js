@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // i18n
     loadTranslations();
     loadServices();
+    loadNews();
 
     function loadServices() {
         fetch('services.json')
@@ -114,6 +115,73 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
+    function loadNews() {
+        fetch('news.json')
+            .then(response => response.json())
+            .then(newsItems => {
+                const newsListContainer = document.querySelector('#ai_news .news-list');
+                if (!newsListContainer) return;
+
+                if (newsItems.length === 0) {
+                    const noNews = document.createElement('p');
+                    noNews.dataset.i18n = "no_news";
+                    newsListContainer.appendChild(noNews);
+                    return;
+                }
+
+                // Sort news by date descending (already sorted by RSS but just in case)
+                newsItems.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                newsItems.forEach(item => {
+                    const newsItem = document.createElement('div');
+                    newsItem.classList.add('news-item', 'service-item'); // Reusing service-item style
+
+                    const link = document.createElement('a');
+                    link.href = item.url;
+                    link.target = '_blank';
+                    link.textContent = item.title;
+                    link.classList.add('news-title');
+
+                    const metaDiv = document.createElement('div');
+                    metaDiv.classList.add('news-meta');
+
+                    const dateSpan = document.createElement('span');
+                    dateSpan.classList.add('news-date');
+                    dateSpan.textContent = item.date;
+
+                    // Check if news is new (today)
+                    const today = new Date().toISOString().split('T')[0];
+                    if (item.date === today) {
+                        const newBadge = document.createElement('span');
+                        newBadge.classList.add('new-badge');
+                        newBadge.textContent = "NEW";
+                        metaDiv.appendChild(newBadge);
+                    }
+
+                    metaDiv.appendChild(dateSpan);
+
+                    const description = document.createElement('p');
+                    description.classList.add('news-description');
+                    description.textContent = item.description;
+
+                    newsItem.appendChild(link);
+                    newsItem.appendChild(metaDiv);
+                    newsItem.appendChild(description);
+                    newsListContainer.appendChild(newsItem);
+                });
+
+                loadTranslations(); // Translate static texts if any
+            })
+            .catch(error => {
+                console.error('Error loading news:', error);
+                const newsListContainer = document.querySelector('#ai_news .news-list');
+                if(newsListContainer) {
+                    newsListContainer.innerHTML = '<p data-i18n="no_news">최신 뉴스가 없습니다.</p>';
+                    loadTranslations();
+                }
+            });
+    }
+
     function loadTranslations() {
         const lang = 'ko'; // navigator.language.substring(0, 2); // Get the first two characters of the language code
         fetch(`translations/${lang}.json`)
@@ -138,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Service sort and filtering
     const sortSelect = document.getElementById('sortSelect');
     const filterInput = document.getElementById('filterInput');
-    const serviceLists = document.querySelectorAll('.service-list');
+    const serviceLists = document.querySelectorAll('.service-list, .news-list');
 
     function sortServices(order = 'default') {
         serviceLists.forEach(serviceList => {
